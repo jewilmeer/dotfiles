@@ -1,0 +1,10 @@
+# dirs
+alias ll='ls -la'
+# rails
+alias sc='script/console'
+alias ss='passenger start'
+# you always forget the sudo :-)
+alias apachectl='sudo apachectl'
+alias r='rails'
+alias be='bundle exec'
+alias spn='be spin push'

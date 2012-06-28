@@ -1,0 +1,49 @@
+[user]
+	name = Jan-Willem van der Meer
+	email = mail@jewilmeer.nl
+[github]
+	user = jewilmeer
+[alias]
+  st = status
+  co = checkout
+  ci = commit -v
+  br = branch
+  lol = log --graph --oneline --decorate
+  lola = log --graph --oneline --decorate --all
+  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  who = shortlog -s -n --no-merges
+  standup = shortlog --since=yesterday
+  ff = pull --ff-only
+  up = !git fetch origin && git pull --ff-only
+  cl = !git log --decorate --graph --abbrev-commit --date=relative --pretty='tformat:%C(yellow)%h%Creset}%Cgreen(%ar)%Creset}%C(bold blue)<%an>%Creset}%C(red)%d%Creset %s' $* | sed -Ee 's/(^[^<]*) ago)/\\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\\1)/' | column -t -s '}' | less -FXRS
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[color "diff"]
+  whitespace = red reverse
+[push]
+  default = current
+[pull]
+  default = current
+[merge]
+  tool = opendiff
+[help]
+  autocorrect = 1
+[core]
+  excludesfile = ~/.gitignore
+[mergetool]
+	keepBackup = true
