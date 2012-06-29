@@ -54,3 +54,4 @@ export PATH=/usr/local/bin:$HOME/.rbenv/bin:$HOME/bin:$PATH
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 eval "$(rbenv init -)"
+source ~/.aliases
