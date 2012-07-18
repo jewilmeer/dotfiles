@@ -8,3 +8,4 @@ alias apachectl='sudo apachectl'
 alias r='rails'
 alias be='bundle exec'
 alias spn='be spin push'
+alias kk="kicker -r rails -b 'spin push'"

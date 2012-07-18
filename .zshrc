@@ -55,3 +55,4 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 eval "$(rbenv init -)"
 source ~/.aliases
+export EDITOR='subl'
