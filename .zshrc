@@ -56,3 +56,14 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 eval "$(rbenv init -)"
 source ~/.aliases
 export EDITOR='subl'
+
+# Setup Ansible
+cd ~/code/tools/ansible
+source ./hacking/env-setup
+cd ~
+export ANSIBLE_HOSTS=~/ansible_hosts
+# End Ansible Setup
+
+# make sure locale settings are correct for ssh sessions
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
