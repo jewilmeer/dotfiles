@@ -1,7 +1,7 @@
 # Load plugins (only those I whitelist)
 Pry.config.should_load_plugins = false
 Pry.plugins["debugger"].activate!
-Pry.plugins["coolline"].activate!
+#Pry.plugins["coolline"].activate!
 
 # Launch Pry with access to the entire Rails stack.
 # If you have Pry in your Gemfile, you can pass: ./script/console --irb=pry instead.
