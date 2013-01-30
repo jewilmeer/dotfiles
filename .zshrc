@@ -56,6 +56,7 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 eval "$(rbenv init -)"
 source ~/.aliases
 export EDITOR='subl'
+export VISUAL='vim'
 
 # Setup Ansible
 cd ~/code/tools/ansible
