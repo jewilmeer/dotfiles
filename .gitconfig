@@ -1,10 +1,11 @@
+[hub]
+  protocol = https
 [user]
-	name = Jan-Willem van der Meer
-	email = mail@jewilmeer.nl
-[github]
-	user = jewilmeer
+  name = Jan-Willem van der Meer
+  email = mail@jewilmeer.nl
+  helper = osxkeychain
 [alias]
-  st = status
+  st = status -sb
   co = checkout
   ci = commit -v
   br = branch
@@ -16,10 +17,15 @@
   ff = pull --ff-only
   up = !git fetch origin && git pull --ff-only
   cl = !git log --decorate --graph --abbrev-commit --date=relative --pretty='tformat:%C(yellow)%h%Creset}%Cgreen(%ar)%Creset}%C(bold blue)<%an>%Creset}%C(red)%d%Creset %s' $* | sed -Ee 's/(^[^<]*) ago)/\\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\\1)/' | column -t -s '}' | less -FXRS
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
 [color]
   branch = auto
   diff = auto
   status = auto
+  ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -35,15 +41,18 @@
   untracked = cyan
 [color "diff"]
   whitespace = red reverse
-[push]
-  default = current
-[pull]
-  default = current
-[merge]
-  tool = opendiff
+[apply]
+  whitespace = nowarn
+[mergetool]
+  keepBackup = false
+[difftool]
+  prompt = false
 [help]
   autocorrect = 1
+[push]
+  default = simple
+[pull]
+  default = simple
 [core]
   excludesfile = ~/.gitignore
-[mergetool]
-	keepBackup = true
+  editor = vim
