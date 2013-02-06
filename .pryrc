@@ -17,6 +17,7 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   elsif Rails.version[0..0] == "3"
     require 'rails/console/app'
     require 'rails/console/helpers'
+    YAML::ENGINE.yamler = "syck"
   else
     warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
   end
