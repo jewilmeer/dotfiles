@@ -50,9 +50,9 @@
 [help]
   autocorrect = 1
 [push]
-  default = simple
+  default = current
 [pull]
-  default = simple
+  default = current
 [core]
   excludesfile = ~/.gitignore
   editor = vim
