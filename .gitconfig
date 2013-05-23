@@ -56,3 +56,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
+[github]
+	user = jewilmeer
+[ghi]
+	token = ff305017405da67b21498efaf8c35d1c4f8bd0e5
