@@ -3,7 +3,7 @@
 .DS_Store
 *.swp
 *~
-reports
+/reports
 dump.rdb
 zeus.json
 custom_plan.rb
