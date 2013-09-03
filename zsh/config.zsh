@@ -8,6 +8,8 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 fpath=($ZSH/zsh/functions $fpath)
+# Loads homebrew zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 autoload -U $ZSH/zsh/functions/*(:t)
 
