@@ -16,6 +16,22 @@ filetype on
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
+" Format the statusline
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+
+function! CurDir()
+  let curdir = substitute(getcwd(), '/home/jewilmeer/', "~/", "g")
+  return curdir
+endfunction
+
+function! HasPaste()
+  if &paste
+    return 'PASTE MODE  '
+  else
+    return ''
+  endif
+endfunction
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
