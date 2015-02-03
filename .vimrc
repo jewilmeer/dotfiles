@@ -27,6 +27,14 @@ function! CurDir()
   return curdir
 endfunction
 
+set relativenumber
+set relativenumber                      "Line numbers are good
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+set hlsearch
+
 function! HasPaste()
   if &paste
     return 'PASTE MODE  '
