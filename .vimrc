@@ -1,16 +1,19 @@
 " Vundle settings
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'git@github.com:gmarik/vundle'
-Bundle 'git@github.com:kien/ctrlp.vim.git'
-Bundle 'git@github.com:scrooloose/nerdtree'
-Bundle 'git@github.com:endel/vim-github-colorscheme.git'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'git@github.com:tpope/vim-surround.git'
-Bundle 'git@github.com:ervandew/supertab.git'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'git@github.com:tpope/vim-surround.git'
+Plugin 'git@github.com:ervandew/supertab.git'
+
+call vundle#end()
 
 filetype on
 filetype indent on    " Enable filetype-specific indenting
@@ -78,9 +81,6 @@ set colorcolumn=+1
 
 " Numbers
 set relativenumber
-
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
 
 "Thoughtbot extras: source http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 "Easier split navigations
