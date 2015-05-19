@@ -1,6 +1,7 @@
+Pry.config.editor = 'vim'
 # Load plugins (only those I whitelist)
 Pry.config.should_load_plugins = false
-Pry.plugins["debugger"].activate!
+# Pry.plugins["debugger"].activate!
 #Pry.plugins["coolline"].activate!
 
 # Launch Pry with access to the entire Rails stack.
