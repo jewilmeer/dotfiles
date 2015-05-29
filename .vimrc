@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:ervandew/supertab.git'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 
