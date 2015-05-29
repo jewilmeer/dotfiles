@@ -29,7 +29,7 @@ function! CurDir()
 endfunction
 
 set relativenumber
-set relativenumber                      "Line numbers are good
+set number
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set visualbell                  "No sounds
@@ -104,4 +104,10 @@ set splitright
 set pastetoggle=<F2>
 set undofile
 nmap <silent> <F3> :NERDTreeToggle<CR>
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
