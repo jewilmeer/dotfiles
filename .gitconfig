@@ -1,5 +1,3 @@
-[hub]
-  protocol = https
 [user]
   name = Jan-Willem van der Meer
   email = mail@jewilmeer.nl
